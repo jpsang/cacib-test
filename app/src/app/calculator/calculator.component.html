@@ -1,0 +1,20 @@
+
+<p>SANG Jean-Philippe</p>
+
+<ul>
+  <li *ngFor="let value of _calculator; let indexOfelement=index;">
+    index: {{indexOfelement}} value : {{value}} 
+  </li>
+</ul>
+
+<input type="number" #box/><button (click)="addValueToStack(box.value)">Enter</button><button (click)="cleanStack()">Clean</button>
+
+<br /><br />
+<ng-container *ngFor="let op of _operators">
+  <button (click)="applyOperator(op)">{{op}}</button>
+  <span>&nbsp;</span>
+</ng-container>
+
+
+
+
